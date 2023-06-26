@@ -1,0 +1,828 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B5D3AB36-B953-45A8-B2C7-D6C26B90DB0E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NEGOCIO_PRESENTACION</RootNamespace>
+    <AssemblyName>NEGOCIO_PRESENTACION</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CircularProgressBar">
+      <HintPath>..\..\..\..\..\..\Documents\1.Tareas Juan\CUARENTENA\1.SENA\Libraries\Libraries\CircularProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WinFormAnimation">
+      <HintPath>..\..\..\..\..\..\Documents\1.Tareas Juan\CUARENTENA\1.SENA\Libraries\Libraries\WinFormAnimation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cargo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cargo.Designer.cs">
+      <DependentUpon>Cargo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cliente.Designer.cs">
+      <DependentUpon>Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cliente_Empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cliente_Empleado.Designer.cs">
+      <DependentUpon>Cliente_Empleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comprobante_Empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comprobante_Empleado.Designer.cs">
+      <DependentUpon>Comprobante_Empleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultar_Modificar_Pagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultar_Modificar_Pagos.Designer.cs">
+      <DependentUpon>Consultar_Modificar_Pagos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultar_Pagos_Emple.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultar_Pagos_Emple.Designer.cs">
+      <DependentUpon>Consultar_Pagos_Emple.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultar_Modificar_Reci_Caja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultar_Modificar_Reci_Caja.Designer.cs">
+      <DependentUpon>Consultar_Modificar_Reci_Caja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultar_Reci_Caja_Emple.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultar_Reci_Caja_Emple.Designer.cs">
+      <DependentUpon>Consultar_Reci_Caja_Emple.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Factura_Compra_Empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Factura_Compra_Empleado.Designer.cs">
+      <DependentUpon>Factura_Compra_Empleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Factura_Venta_Empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Factura_Venta_Empleado.Designer.cs">
+      <DependentUpon>Factura_Venta_Empleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forma_Pago_Empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forma_Pago_Empleado.Designer.cs">
+      <DependentUpon>Forma_Pago_Empleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio_Sesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio_Sesion.Designer.cs">
+      <DependentUpon>Inicio_Sesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MENU_PRINCIPALEM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MENU_PRINCIPALEM.Designer.cs">
+      <DependentUpon>MENU_PRINCIPALEM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_Reportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_Reportes.Designer.cs">
+      <DependentUpon>Menu_Reportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_Reportes_Proveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_Reportes_Proveedores.Designer.cs">
+      <DependentUpon>Menu_Reportes_Proveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_Reporte_Cargo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_Reporte_Cargo.Designer.cs">
+      <DependentUpon>Menu_Reporte_Cargo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_Reporte_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_Reporte_Cliente.Designer.cs">
+      <DependentUpon>Menu_Reporte_Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_Reporte_Comprobante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_Reporte_Comprobante.Designer.cs">
+      <DependentUpon>Menu_Reporte_Comprobante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_Reporte_Empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_Reporte_Empleado.Designer.cs">
+      <DependentUpon>Menu_Reporte_Empleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_Reporte_FacturaCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_Reporte_FacturaCompra.Designer.cs">
+      <DependentUpon>Menu_Reporte_FacturaCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_Reporte_FactVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_Reporte_FactVenta.Designer.cs">
+      <DependentUpon>Menu_Reporte_FactVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_Reporte_Forma_Pago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_Reporte_Forma_Pago.Designer.cs">
+      <DependentUpon>Menu_Reporte_Forma_Pago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_Reporte_Pagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_Reporte_Pagos.Designer.cs">
+      <DependentUpon>Menu_Reporte_Pagos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_Reporte_Recibo_Caja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_Reporte_Recibo_Caja.Designer.cs">
+      <DependentUpon>Menu_Reporte_Recibo_Caja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pagos.Designer.cs">
+      <DependentUpon>Pagos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pagos_Empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pagos_Empleado.Designer.cs">
+      <DependentUpon>Pagos_Empleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Proveedores_Empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proveedores_Empleado.Designer.cs">
+      <DependentUpon>Proveedores_Empleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recibo_Caja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recibo_Caja.Designer.cs">
+      <DependentUpon>Recibo_Caja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empleado.Designer.cs">
+      <DependentUpon>Empleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Factura_Venta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Factura_Venta.Designer.cs">
+      <DependentUpon>Factura_Venta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comprobante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comprobante.Designer.cs">
+      <DependentUpon>Comprobante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forma_Pago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forma_Pago.Designer.cs">
+      <DependentUpon>Forma_Pago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pantalla_de_carga.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantalla_de_carga.Designer.cs">
+      <DependentUpon>Pantalla_de_carga.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOGIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOGIN.Designer.cs">
+      <DependentUpon>LOGIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MENU_PRINCIPAL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MENU_PRINCIPAL.Designer.cs">
+      <DependentUpon>MENU_PRINCIPAL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proveedores.Designer.cs">
+      <DependentUpon>Proveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Factura_Compra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Factura_Compra.Designer.cs">
+      <DependentUpon>Factura_Compra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recibo_Caja_Empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recibo_Caja_Empleado.Designer.cs">
+      <DependentUpon>Recibo_Caja_Empleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Reporte_Especifico_Cargo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reporte_Especifico_Cargo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\Reporte_Especifico_Cliente.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reporte_Especifico_Cliente.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\Reporte_Especifico_Comprobante.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reporte_Especifico_Comprobante.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\Reporte_Especifico_Empleado.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reporte_Especifico_Empleado.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\Reporte_Especifico_Factura_Compra.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reporte_Especifico_Factura_Compra.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\Reporte_Especifico_Factura_Venta.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reporte_Especifico_Factura_Venta.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\Reporte_Especifico_Forma_Pago.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reporte_Especifico_Forma_Pago.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\Reporte_Especifico_Pago.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reporte_Especifico_Pago.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\Reporte_Especifico_Proveedores.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reporte_Especifico_Proveedores.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\Reporte_Especifico_Recibo_Caja.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reporte_Especifico_Recibo_Caja.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\Reporte_General_Cargo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reporte_General_Cargo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\Reporte_General_Cliente.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reporte_General_Cliente.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\Reporte_General_Comprobante.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reporte_General_Comprobante.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\Reporte_General_Empleado.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reporte_General_Empleado.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\Reporte_General_Factura_Compra.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reporte_General_Factura_Compra.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\Reporte_General_Factura_Venta.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reporte_General_Factura_Venta.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\Reporte_General_Forma_Pago.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reporte_General_Forma_Pago.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\Reporte_General_Pagos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reporte_General_Pagos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\Reporte_General_Proveedores.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reporte_General_Proveedores.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\Reporte_General_Recibo_Caja.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reporte_General_Recibo_Caja.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reporte_Especifico_Cargo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_Especifico_Cargo.Designer.cs">
+      <DependentUpon>Reporte_Especifico_Cargo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_Especifico_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_Especifico_Cliente.Designer.cs">
+      <DependentUpon>Reporte_Especifico_Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_Especifico_Comprobante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_Especifico_Comprobante.Designer.cs">
+      <DependentUpon>Reporte_Especifico_Comprobante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_Especifico_Empeleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_Especifico_Empeleado.Designer.cs">
+      <DependentUpon>Reporte_Especifico_Empeleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_Especifico_FactCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_Especifico_FactCompra.Designer.cs">
+      <DependentUpon>Reporte_Especifico_FactCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_Especifico_FactVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_Especifico_FactVenta.Designer.cs">
+      <DependentUpon>Reporte_Especifico_FactVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_Especifico_Forma_Pago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_Especifico_Forma_Pago.Designer.cs">
+      <DependentUpon>Reporte_Especifico_Forma_Pago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_Especifico_Pagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_Especifico_Pagos.Designer.cs">
+      <DependentUpon>Reporte_Especifico_Pagos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_Especifico_Proveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_Especifico_Proveedores.Designer.cs">
+      <DependentUpon>Reporte_Especifico_Proveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_Especifico_Recibo_Caja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_Especifico_Recibo_Caja.Designer.cs">
+      <DependentUpon>Reporte_Especifico_Recibo_Caja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_General_Cargo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_General_Cargo.Designer.cs">
+      <DependentUpon>Reporte_General_Cargo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_General_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_General_Cliente.Designer.cs">
+      <DependentUpon>Reporte_General_Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_General_Comprobante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_General_Comprobante.Designer.cs">
+      <DependentUpon>Reporte_General_Comprobante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_General_Empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_General_Empleado.Designer.cs">
+      <DependentUpon>Reporte_General_Empleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_General_FacCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_General_FacCompra.Designer.cs">
+      <DependentUpon>Reporte_General_FacCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_General_FacVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_General_FacVenta.Designer.cs">
+      <DependentUpon>Reporte_General_FacVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_General_Forma_Pago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_General_Forma_Pago.Designer.cs">
+      <DependentUpon>Reporte_General_Forma_Pago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_General_Pagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_General_Pagos.Designer.cs">
+      <DependentUpon>Reporte_General_Pagos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_General_Proveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_General_Proveedores.Designer.cs">
+      <DependentUpon>Reporte_General_Proveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_General_Recibo_Caja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_General_Recibo_Caja.Designer.cs">
+      <DependentUpon>Reporte_General_Recibo_Caja.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Cargo.resx">
+      <DependentUpon>Cargo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cliente.resx">
+      <DependentUpon>Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cliente_Empleado.resx">
+      <DependentUpon>Cliente_Empleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comprobante_Empleado.resx">
+      <DependentUpon>Comprobante_Empleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultar_Modificar_Pagos.resx">
+      <DependentUpon>Consultar_Modificar_Pagos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultar_Pagos_Emple.resx">
+      <DependentUpon>Consultar_Pagos_Emple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultar_Modificar_Reci_Caja.resx">
+      <DependentUpon>Consultar_Modificar_Reci_Caja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultar_Reci_Caja_Emple.resx">
+      <DependentUpon>Consultar_Reci_Caja_Emple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Factura_Compra_Empleado.resx">
+      <DependentUpon>Factura_Compra_Empleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Factura_Venta_Empleado.resx">
+      <DependentUpon>Factura_Venta_Empleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forma_Pago_Empleado.resx">
+      <DependentUpon>Forma_Pago_Empleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio_Sesion.resx">
+      <DependentUpon>Inicio_Sesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MENU_PRINCIPALEM.resx">
+      <DependentUpon>MENU_PRINCIPALEM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_Reportes.resx">
+      <DependentUpon>Menu_Reportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_Reportes_Proveedores.resx">
+      <DependentUpon>Menu_Reportes_Proveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_Reporte_Cargo.resx">
+      <DependentUpon>Menu_Reporte_Cargo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_Reporte_Cliente.resx">
+      <DependentUpon>Menu_Reporte_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_Reporte_Comprobante.resx">
+      <DependentUpon>Menu_Reporte_Comprobante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_Reporte_Empleado.resx">
+      <DependentUpon>Menu_Reporte_Empleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_Reporte_FacturaCompra.resx">
+      <DependentUpon>Menu_Reporte_FacturaCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_Reporte_FactVenta.resx">
+      <DependentUpon>Menu_Reporte_FactVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_Reporte_Forma_Pago.resx">
+      <DependentUpon>Menu_Reporte_Forma_Pago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_Reporte_Pagos.resx">
+      <DependentUpon>Menu_Reporte_Pagos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_Reporte_Recibo_Caja.resx">
+      <DependentUpon>Menu_Reporte_Recibo_Caja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pagos.resx">
+      <DependentUpon>Pagos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pagos_Empleado.resx">
+      <DependentUpon>Pagos_Empleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Proveedores_Empleado.resx">
+      <DependentUpon>Proveedores_Empleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recibo_Caja.resx">
+      <DependentUpon>Recibo_Caja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empleado.resx">
+      <DependentUpon>Empleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Factura_Venta.resx">
+      <DependentUpon>Factura_Venta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comprobante.resx">
+      <DependentUpon>Comprobante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forma_Pago.resx">
+      <DependentUpon>Forma_Pago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantalla_de_carga.resx">
+      <DependentUpon>Pantalla_de_carga.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOGIN.resx">
+      <DependentUpon>LOGIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MENU_PRINCIPAL.resx">
+      <DependentUpon>MENU_PRINCIPAL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Proveedores.resx">
+      <DependentUpon>Proveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Factura_Compra.resx">
+      <DependentUpon>Factura_Compra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recibo_Caja_Empleado.resx">
+      <DependentUpon>Recibo_Caja_Empleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Reporte_Especifico_Cargo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Reporte_Especifico_Cargo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Reporte_Especifico_Cliente.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Reporte_Especifico_Cliente.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Reporte_Especifico_Comprobante.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Reporte_Especifico_Comprobante.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Reporte_Especifico_Empleado.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Reporte_Especifico_Empleado.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Reporte_Especifico_Factura_Compra.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Reporte_Especifico_Factura_Compra.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Reporte_Especifico_Factura_Venta.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Reporte_Especifico_Factura_Venta.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Reporte_Especifico_Forma_Pago.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Reporte_Especifico_Forma_Pago.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Reporte_Especifico_Pago.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Reporte_Especifico_Pago.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Reporte_Especifico_Proveedores.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Reporte_Especifico_Proveedores.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Reporte_Especifico_Recibo_Caja.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Reporte_Especifico_Recibo_Caja.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Reporte_General_Cargo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Reporte_General_Cargo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Reporte_General_Cliente.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Reporte_General_Cliente.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Reporte_General_Comprobante.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Reporte_General_Comprobante.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Reporte_General_Empleado.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Reporte_General_Empleado.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Reporte_General_Factura_Compra.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Reporte_General_Factura_Compra.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Reporte_General_Factura_Venta.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Reporte_General_Factura_Venta.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Reporte_General_Forma_Pago.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Reporte_General_Forma_Pago.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Reporte_General_Pagos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Reporte_General_Pagos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Reporte_General_Proveedores.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Reporte_General_Proveedores.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Reporte_General_Recibo_Caja.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Reporte_General_Recibo_Caja.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_Especifico_Cargo.resx">
+      <DependentUpon>Reporte_Especifico_Cargo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_Especifico_Cliente.resx">
+      <DependentUpon>Reporte_Especifico_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_Especifico_Comprobante.resx">
+      <DependentUpon>Reporte_Especifico_Comprobante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_Especifico_Empeleado.resx">
+      <DependentUpon>Reporte_Especifico_Empeleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_Especifico_FactCompra.resx">
+      <DependentUpon>Reporte_Especifico_FactCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_Especifico_FactVenta.resx">
+      <DependentUpon>Reporte_Especifico_FactVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_Especifico_Forma_Pago.resx">
+      <DependentUpon>Reporte_Especifico_Forma_Pago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_Especifico_Pagos.resx">
+      <DependentUpon>Reporte_Especifico_Pagos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_Especifico_Proveedores.resx">
+      <DependentUpon>Reporte_Especifico_Proveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_Especifico_Recibo_Caja.resx">
+      <DependentUpon>Reporte_Especifico_Recibo_Caja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_General_Cargo.resx">
+      <DependentUpon>Reporte_General_Cargo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_General_Cliente.resx">
+      <DependentUpon>Reporte_General_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_General_Comprobante.resx">
+      <DependentUpon>Reporte_General_Comprobante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_General_Empleado.resx">
+      <DependentUpon>Reporte_General_Empleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_General_FacCompra.resx">
+      <DependentUpon>Reporte_General_FacCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_General_FacVenta.resx">
+      <DependentUpon>Reporte_General_FacVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_General_Forma_Pago.resx">
+      <DependentUpon>Reporte_General_Forma_Pago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_General_Pagos.resx">
+      <DependentUpon>Reporte_General_Pagos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_General_Proveedores.resx">
+      <DependentUpon>Reporte_General_Proveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_General_Recibo_Caja.resx">
+      <DependentUpon>Reporte_General_Recibo_Caja.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BASE_DATOS\BASE_DATOS.csproj">
+      <Project>{b3a56c44-3e49-4cc7-bb47-2e0b94b9caf0}</Project>
+      <Name>BASE_DATOS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LOGICA\LOGICA.csproj">
+      <Project>{d3e67934-7d36-427d-8b29-890dc14fc9fa}</Project>
+      <Name>LOGICA</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
